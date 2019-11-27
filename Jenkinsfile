@@ -6,7 +6,7 @@ pipeline {
             label 'slave'
           }
           steps {
-            sh 'sudo bash shellcheck install_shellcheck.sh'
+            sh 'sudo bash install_shellcheck.sh'
           }
         }
         stage('Shellcheck install_node.sh') {
