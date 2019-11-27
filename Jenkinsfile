@@ -1,6 +1,14 @@
 pipeline {
   agent none
       stages {
+        stage('Shellcheck install') {
+          agent {
+            label 'slave'
+          }
+          steps {
+            sh 'sudo bash shellcheck install_shellcheck.sh'
+          }
+        }
         stage('Shellcheck install_node.sh') {
           agent {
             label 'slave'
