@@ -14,7 +14,7 @@ pipeline {
             label 'slave'
           }
           steps {
-            sh 'sudo install_node.sh'
+            sh 'install_node.sh'
             sh 'sudo firewall-cmd --add-port=6453/tcp --permanent'
             sh 'sudo firewall-cmd --reload'
           }
