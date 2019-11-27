@@ -27,5 +27,13 @@ pipeline {
             sh 'sudo firewall-cmd --reload'
           }
         }
+        stage('Test if nodeJS is running fine') {
+          agent {
+            label 'slave'
+          }
+          steps {
+            sh 'sudo bash test_node.sh'
+          }
+        }
       }
 }
