@@ -10,10 +10,9 @@ Description=Node.JS Systemd Unit file with Supervisor listener
 Documentation=https://example.com
 After=network.target
 [Service]
-Environment=NODE_PORT=6111
 Type=simple
 User=root
-ExecStart=/bin/supervisor --watch /etc/nginx/ /etc/nginx/index.js
+ExecStart=/bin/supervisor --watch /var/lib/jenkins/workspace/DevOps_exam_pipeline /var/lib/jenkins/workspace/DevOps_exam_pipeline/index.js
 Restart=on-failure
 [Install]
 WantedBy=multi-user.target" > /lib/systemd/system/nodejs.service
