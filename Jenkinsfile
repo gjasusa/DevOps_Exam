@@ -15,7 +15,7 @@ pipeline {
           }
           steps {
             sh 'sudo bash install_node.sh'
-            sh 'sudo firewall-cmd --add-port=6453/tcp --permanent'
+            sh 'sudo firewall-cmd --add-port=6543/tcp --permanent'
             sh 'sudo firewall-cmd --reload'
           }
         }
